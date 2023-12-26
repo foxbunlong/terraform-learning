@@ -9,7 +9,7 @@ Create `main.tf` file
 Update `provider "docker"` to fix running locally with Docker Desktop
 host = "unix:///home/`replaced with pc username`/.docker/desktop/docker.sock"
 
-## Step 2:
+## Step 3:
 ```console
 foo@bar:~$ terraform init
 
