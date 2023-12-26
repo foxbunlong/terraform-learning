@@ -31,6 +31,9 @@ foo@bar:~$ git clone https://github.com/localstack/localstack-demo.git
 ## Step 6:
 Deploy demo project to localstack docker container
 ```console
+foo@bar:~$ cd localstack-demo
+```
+```console
 foo@bar:~$ make deploy
 ```
 To test above setup, visit the page [archive-bucket](http://localhost:4566/archive-bucket/index.html)
