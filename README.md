@@ -10,7 +10,7 @@ Update `provider "docker"` to fix running locally with Docker Desktop
 host = "unix:///home/`replaced with pc username`/.docker/desktop/docker.sock"
 
 ## Step 3:
-```console
+```bash
 foo@bar:~$ terraform init
 
 foo@bar:~$ terraform apply
@@ -18,19 +18,19 @@ foo@bar:~$ terraform apply
 
 ## Step 4:
 Start the localstack docker container
-```console
+```bash
 foo@bar:~$ docker-compose up -d
 ```
 
 ## Step 5:
 Clone below project
 ```bash
-$ git clone https://github.com/localstack/localstack-demo.git
+foo@bar:~$ git clone https://github.com/localstack/localstack-demo.git
 ```
 
 ## Step 6:
 Deploy demo project to localstack docker container
 ```bash
-$ make deploy
+foo@bar:~$ make deploy
 ```
-To test above setup, visit the page [archive-bucket]('http://localhost:4566/archive-bucket/index.html')
+To test above setup, visit the page [archive-bucket](http://localhost:4566/archive-bucket/index.html)
