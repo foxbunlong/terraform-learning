@@ -1,2 +1,7 @@
 .terraform*
 terraform.*
+
+volume*
+
+.serverless*
+node_modules*
