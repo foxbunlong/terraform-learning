@@ -15,6 +15,7 @@ foo@bar:~$ terraform init
 
 foo@bar:~$ terraform apply
 ```
+After this step, you will have nginx server running locally at [localhost:8000](http://localhost:8000) . Check Docker Desktop to see new container up and running
 
 ## Step 4:
 Start the localstack docker container
@@ -37,3 +38,38 @@ foo@bar:~$ cd localstack-demo
 foo@bar:~$ make deploy
 ```
 To test above setup, visit the page [archive-bucket](http://localhost:4566/archive-bucket/index.html)
+
+----------
+## Final step: Clean up
+Remove all localstack containers
+```console
+# Move to root directory
+foo@bar:~$ cd ..
+# Run this bash to turn down service containers
+foo@bar:~$ docker-compose down -v --remove-orphans
+```
+
+Remove nginx server at port 8000
+```console
+foo@bar:~$ terraform destroy
+```
+
+----------
+### Tips and tricks
+- Before editting the main.tf file, remember to `turn down all service containers`
+- If network cannot be released, try to disconnect any container connected to that network
+
+- Format all configurations
+```console
+foo@bar:~$ terraform fmt
+```
+
+- Validate configuration
+```console
+foo@bar:~$ terraform validate
+```
+
+- Check current state: content come from `terraform.tfstate`
+```console
+foo@bar:~$ terraform show
+```
