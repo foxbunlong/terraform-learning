@@ -17,6 +17,11 @@ foo@bar:~$ terraform apply
 ```
 After this step, you will have nginx server running locally at [localhost:8000](http://localhost:8000) . Check Docker Desktop to see new container up and running
 
+You can check `outputs` of container id with below command. You can add more log `outputs` in `outputs.tf` file
+```console
+foo@bar:~$ terraform output
+```
+
 ## Step 4:
 Start the localstack docker container
 ```console
