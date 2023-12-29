@@ -7,7 +7,10 @@ Create `main.tf` file
 
 ## Step 2:
 Update `provider "docker"` to fix running locally with Docker Desktop
+##### Linux
 host = "unix:///home/`replaced with pc username`/.docker/desktop/docker.sock"
+##### Mac
+host = "unix:///Users/`replaced with pc username`/.docker/run/docker.sock"
 
 ## Step 3:
 ```console
