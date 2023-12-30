@@ -1,4 +1,10 @@
 terraform {
+  # cloud {
+  #   organization = "Terraform-Learning-FoxBunLong"
+  #   workspaces {
+  #     name = "terraform-learning-cli"
+  #   }
+  # }
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"

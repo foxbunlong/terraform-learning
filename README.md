@@ -94,3 +94,19 @@ foo@bar:~$ terraform validate
 ```console
 foo@bar:~$ terraform show
 ```
+
+----------
+## Terraform Cloud
+This workflow is not working for `localstack` and Docker Desktop
+```console
+# Login
+foo@bar:~$ terraform login
+
+# Paste token from web
+
+# Run init again
+foo@bar:~$ terraform init
+
+# Remove terraform state file
+foo@bar:~$ rm terraform.tfstate
+```
