@@ -6,11 +6,17 @@
 Create `main.tf` file
 
 ## Step 2:
+Make sure you check on your pc with following command
+```console
+foo@bar:~$ docker context ls
+```
 Update `provider "docker"` to fix running locally with Docker Desktop
-##### Linux
+#### Linux
 host = "unix:///home/`replaced with pc username`/.docker/desktop/docker.sock"
-##### Mac
+#### Mac
 host = "unix:///Users/`replaced with pc username`/.docker/run/docker.sock"
+#### Windows 10 and above (with WSL)
+host = "npipe:////./pipe/dockerDesktopLinuxEngine"
 
 ## Step 3:
 ```console
@@ -43,9 +49,16 @@ Deploy demo project to localstack docker container
 foo@bar:~$ cd localstack-demo
 ```
 ```console
+# On Mac or Linux
 foo@bar:~$ make deploy
+
+# On Windows 10 and above (with WSL), make sure you install serverless before run below script
+foo@bar:~$ serverless deploy --stage local
 ```
-To test above setup, visit the page [archive-bucket](http://localhost:4566/archive-bucket/index.html)
+
+To test above setup,
+on `Mac` and `Linux`, visit the page [archive-bucket](http://localhost:4566/archive-bucket/index.html)
+on `Windows`, visit the page [archive-bucket](http://localhost:4566/archive-bucket/demo/web/index.html)
 
 ----------
 ## Final step: Clean up
